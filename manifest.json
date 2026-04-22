@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube SpeedSaver TEST",
+    "version": "1.0",
+    "description": "A simple extension to save YouTube video speed, if you have any privacy extensions enabled.",
+    "permissions": ["storage"],
+    "content_scripts": [
+        {
+            "matches": ["*://*.youtube.com/*"],
+            "js": ["content.js"]
+        },
+        {
+            "matches": ["*://*.youtube.com/*"],
+            "js": ["ui_sync.js"],
+            "world": "MAIN" 
+        }
+    ]
+}
